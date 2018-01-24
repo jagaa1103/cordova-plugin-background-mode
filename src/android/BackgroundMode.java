@@ -184,11 +184,11 @@ public class BackgroundMode extends CordovaPlugin {
      * @param update A truthy value means to update the running service.
      */
     private void configure(JSONObject settings, boolean update) {
-        if (update) {
-            updateNotification(settings);
-        } else {
-            setDefaultSettings(settings);
-        }
+        // if (update) {
+        //     updateNotification(settings);
+        // } else {
+        //     setDefaultSettings(settings);
+        // }
     }
 
     /**
