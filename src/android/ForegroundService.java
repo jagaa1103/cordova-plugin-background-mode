@@ -112,9 +112,9 @@ public class ForegroundService extends Service {
         JSONObject settings = BackgroundMode.getSettings();
         boolean isSilent    = settings.optBoolean("silent", false);
 
-        if (!isSilent) {
-            startForeground(NOTIFICATION_ID, makeNotification());
-        }
+        // if (!isSilent) {
+        //     startForeground(NOTIFICATION_ID, makeNotification());
+        // }
 
         PowerManager pm = (PowerManager)
                 getSystemService(POWER_SERVICE);
@@ -198,15 +198,15 @@ public class ForegroundService extends Service {
      * @param settings The config settings
      */
     protected void updateNotification (JSONObject settings) {
-        boolean isSilent = settings.optBoolean("silent", false);
+        // boolean isSilent = settings.optBoolean("silent", false);
 
-        if (isSilent) {
-            stopForeground(true);
-            return;
-        }
+        // if (isSilent) {
+        //     stopForeground(true);
+        //     return;
+        // }
 
-        Notification notification = makeNotification(settings);
-        getNotificationManager().notify(NOTIFICATION_ID, notification);
+        // Notification notification = makeNotification(settings);
+        // getNotificationManager().notify(NOTIFICATION_ID, notification);
     }
 
     /**
